@@ -1,0 +1,53 @@
+# Create .gitignore with good defaults for your project
+@"
+# ========================================
+# LysM-RLK E. coracana Project .gitignore
+# ========================================
+
+# Large genomic files (never commit these)
+*.fasta
+*.fa
+*.fna
+*.faa
+*.fastq
+*.fq
+*.bam
+*.sam
+*.bai
+*.vcf
+*.bcf
+*.gff
+*.gtf
+*.bed
+
+# Genome assemblies / big databases
+Ec_genome/
+genome/
+data/genome/
+*.genome
+*.assembly*
+
+# Large intermediate files
+*.csv
+!tblastn_results.csv
+!*_filtered.csv
+!*_summary.csv
+!*_hits.csv
+
+# Python / analysis artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+*.log
+
+# Temporary folders
+temp/
+tmp/
+cache/
+outputs/
+
+# OS files
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding utf8 .gitignore
