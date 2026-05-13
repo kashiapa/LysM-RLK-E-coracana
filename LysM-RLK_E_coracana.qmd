@@ -1,0 +1,24 @@
+---
+title: "Python Verbose Test"
+format: html
+engine: knitr
+jupyter: python3
+---
+
+\`\`\`{python}
+
+#\| label: verbose-test
+
+#\| echo: true
+
+#\| output: true
+
+#\| warning: true
+
+#\| error: true
+
+import sys import pandas as pd import os
+
+print("=== PYTHON DIAGNOSTICS ===") print("Python version:", sys.version) print("Executable:", sys.executable) print("Working directory:", os.getcwd()) print("Pandas version:", pd.\_\_version\_\_)
+
+print("\n=== FILE CHECK ===") print("tblastn_results.tsv exists?", os.path.exists("tblastn_results.tsv")) print("Files in folder:", \[f for f in os.listdir(".") if "tblastn" in f.lower() or f.endswith(".tsv")\])
